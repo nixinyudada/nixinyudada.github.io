@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS 物理运动</title>
+	<script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+	<style>	
+			.circle{
+				width: 100px;
+				height: 100px;
+				background:red;
+
+			}			
+	</style>
+</head>
+<body>
+	<div id="circle" class="circle"></div>
+
+	<script>
+		window.onload = function(){
+			/*
+		1. 匀速运动
+			- 让小球在2s内向右匀速移动200px
+			1. 时间：t = T * p
+			2. 位移：St = S * p = v * t
+			3. 速度：v = St/t = S / t
+			4. 加速度：a = 0
+		 */
+		var circle = $('#circle')
+		{/*circle.on('click',function(){
+			var self = this;
+			var startTime = Date.now();
+			var distance = 200;
+			var T = 2000;
+			requestAnimationFrame(function step(){
+				var p = Math.min(1.0,(Date.now() - startTime) / T);
+				self.style.transform = 'translateX('+(distance * p) +'px)';
+				if(p < 1.0){
+					requestAnimationFrame(step);
+				}
+			})
+		})*/}
+
+
+		/*
+		2. 匀速加速运动
+			- 让小球在2s内向右加速向右移动200px，速度从0开始
+				* 时间：t = T * p
+				* 位移：St = S * p^2 = (S * t^2) / T^2
+				* 速度：v = (2 * S / T^2) * t = 2Sp / T
+				* 加速度：a = 2 * S / T ^ 2
+		 */
+		
+		{/*circle.on('click',function(){
+			var self = this;
+			var startTime = Date.now();
+			var distance = 800;
+			var T = 2000;
+			requestAnimationFrame(function step(){
+				var p = Math.min(1.0,(Date.now() - startTime) / T)
+				self.style.transform = 'translateX('+(distance * p * p)+'px)';
+				if(p < 1.0){
+					requestAnimationFrame(step)
+				}
+			})
+		})*/}
+
+		
+		/*
+		3. 匀速减速运动
+			- 让小球在2s内向右匀减速向右移动200px，速度从最大减为0
+				* 时间: t = T * p 
+				* 位移: St = (2*S / T) * t - (S / T^2) * t^2 = Sp * (2 - p) 
+				* 速度: v = 2*S / T - 2*S / t^2 * t 
+				* 加速度 a = -2*S / T^2
+		 */
+		
+		{/*circle.on('click',function(){
+			var self = this;
+			var startTime = Date.now();
+			var distance = 800;
+			var T = 2000;
+			requestAnimationFrame(function step(){
+				var p = Math.min(1.0,(Date.now() - startTime) / T);
+				self.style.transform = 'translateX('+(distance * p * (2 - p))+'px)';
+				if(p < 1.0){
+					requestAnimationFrame(step)
+				}
+			})
+		})*/}
+
+
+		/*
+		4. 抛物线运动
+		 */
+		
+		{/*circle.on('click',function(){
+			var self = this;
+			var startTime = Date.now();
+			var disX = 200,disY = 200;
+			var T = 1000 * Math.sqrt(2 * disY / 98);
+			requestAnimationFrame(function step(){
+				var p = Math.min(1.0,(Date.now() - startTime) / T);
+
+				var tx = disX * p;
+				var ty = disY * p * p;
+				self.style.transform = 'translate('+ tx + 'px,'+ ty +'px)';
+				if(p < 1.0){
+					requestAnimationFrame(step)
+				}
+			})	
+		})*/}
+
+
+		/*
+		5.简谐摆动
+		 */
+		
+		{/*circle.on('click', function() {
+		    var self = this;
+		    var startTime = Date.now();
+		    var distance = 100;
+		    var T = 2000;
+		    requestAnimationFrame(function step() {
+		        var p = Math.min(1.0, (Date.now() - startTime) / T);
+		        var tx = distance * Math.sin(2 * Math.PI * p);
+		        self.style.transform = 'translateX(' + tx + 'px)';
+		        if(p < 1.0){
+		            requestAnimationFrame(step);
+		        }
+		    })
+		})*/}
+
+
+		/*
+		6.正弦线
+		 */
+		
+		{/*circle.on('click', function() {
+		    var self = this;
+		    var startTime = Date.now();
+		    var distance = 100;
+		    var T = 2000;
+		    requestAnimationFrame(function step() {
+		        var p = Math.min(1.0, (Date.now() - startTime) / T);
+		        var ty = distance * Math.sin(2 * Math.PI * p);
+		        var tx = 2 * distance * p;
+		        self.style.transform = 'translate(' + tx + 'px,'+ ty +'px)';
+		        if(p < 1.0){
+		            requestAnimationFrame(step);
+		        }
+		    })
+		})*/}
+
+
+
+		/*
+		7.圆周运动
+		 */
+		
+		{/*circle.on('click', function() {
+		    var self = this;
+		    var startTime = Date.now();
+		    var distance = 100;
+		    var T = 2000;
+		    var r = 100;
+		    requestAnimationFrame(function step() {
+		        var p = Math.min(1.0, (Date.now() - startTime) / T);
+		        var rotation = p * 360;
+		        self.style.transformOrigin = 'r' + 'px ' + r + 'px';
+		        self.style.transform = 'rotate(' + rotation +'deg)';
+		        if(p < 1.0){
+		            requestAnimationFrame(step);
+		        }
+			})
+		})*/}
+	
+
+	/*---------------------------------------------*/
+	/*---------------------------------------------*/
+	
+	
+
+	/*---------------------------------------------*/
+	/*---------------------------------------------*/
+
+	}
+
+	</script>
+</body>
+</html>

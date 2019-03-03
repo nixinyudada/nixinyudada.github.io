@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+<script>
+	function Starry(){
+		this.ctx = canvas.getContext('2d');
+		this.num = 400;
+		// 储存粒子的属性
+		this.data = [];
+	}
+ 
+	Starry.prototype = {
+		// 初始化
+		init:function(){
+			var self = this;
+			// 画布和浏览器窗口等宽等高
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			this.cW = canvas.width;
+			this.cH = canvas.height;
+
+			for(var i = 0;i < this.num;i++){
+				this.data[i] = {
+					// 随机位置(运动初始值)
+					x:Math.random() * self.cW,
+					y:Math.random() * self.cH,
+					// 自定义随机增量
+					cX:Math.random() * 0.6 - 0.3,
+					cY:Math.random() * 0.6 - 0.3
+				}
+				this.drawCircle(this.data[i].x,this.data[i].y);
+			}
+		},
+		// 绘制粒子
+		drawCircle:function(x,y){
+			this.ctx.save();
+			this.ctx.fillStyle = '#000';
+			this.ctx.beginPath();
+			this.ctx.arc(x,y,1,0,Math.PI*2,false);
+			this.ctx.closePath();
+			this.ctx.fill();
+			this.ctx.restore();
+		},
+		// 粒子运动
+		moveCircle:function(){
+			// 清除上一帧
+			this.ctx.clearRect(0,0,this.cW,this.cH);
+			for(var i = 0;i < this.num;i++){
+				var self = this;
+				 this.data[i].x += this.data[i].cX;
+				 this.data[i].y += this.data[i].cY;
+
+				 // 不能超出边界！
+				 if(this.data[i].x > this.cW || this.data[i].x < 0){
+				 	this.data[i].cX = -this.data[i].cX;
+				 }
+				 if(this.data[i].y > this.cH || this.data[i].y < 0){
+					this.data[i].cY = -this.data[i].cY;
+				 }
+				this.drawCircle(this.data[i].x,this.data[i].y);
+				// 使用勾股定理判断是否连线
+				// 1. 上一个点（当前 i ）
+				// 2. 下一个点
+				
+				for(var j = i+1;j<self.num;j++){
+					if(Math.pow(self.data[i].x - self.data[j].x,2)+ Math.pow(self.data[i].y - self.data[j].y,2) <= 55*55) {
+						self.drawLine(self.data[i].x,self.data[i].y,self.data[j].x,self.data[j].y);
+					}
+				}
+				
+			}
+		},
+		// 绘制线条
+		drawLine:function(x1,y1,x2,y2){
+			var ctx = this.ctx;
+			var color = ctx.createLinearGradient(x1,y1,x2,y2);
+			color.addColorStop(0,'#ccc');
+			color.addColorStop(0.5,'#000');
+			color.addColorStop(1,'#000');
+
+			ctx.save();
+			ctx.strokeStyle = color;
+			ctx.beginPath();
+			ctx.moveTo(x1,y1);
+			ctx.lineTo(x2,y2);
+			ctx.closePath();
+			ctx.stroke();
+			ctx.restore();
+		}
+	}
+
+	var starry = new Starry('123');
+	starry.init();
+	setInterval(function(){
+		starry.moveCircle();
+	},30);
+</script>
+</html>

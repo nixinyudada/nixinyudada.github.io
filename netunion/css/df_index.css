@@ -1,0 +1,42 @@
+@font-face {
+    /* font-properties */
+    font-family: pictos;
+    src:url('pictos/pictos-web.woff'),
+    url('pictos/pictos-web.ttf'),
+    url('pictos/pictos-web.eot'); /* IE9 */
+}
+.root{
+			width:90%;
+			height: 90%;
+			padding-top: 5%;
+			padding-left: 5%;
+			position: relative;
+		}
+		.container{
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+		}
+		.box1{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			border: 4px dashed green;
+			animation: root 16s infinite linear;
+		}
+		.box2{
+			width: 30px;
+			height: 30px;
+			color: red;
+			position: absolute;
+			top: 14px;
+			left: 15px;
+			z-index: -1;
+			font-family: 'STLiti';
+			color: red;
+			font-size: 26px;
+		}
+		@keyframes root{
+			0% {transform:rotate(-10deg) rotateX(-20deg) rotateY(0deg)}
+            100% {transform:rotate(-10deg) rotateX(-20deg) rotateY(360deg)}
+		}

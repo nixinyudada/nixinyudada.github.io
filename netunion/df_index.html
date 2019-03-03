@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>index </title>
+	<link href="https://cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/df_index.css">
+	<link rel="stylesheet" href="css/organization.css">
+	<link rel="stylesheet" href="css/member.css">
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+		.nav{
+			width: 100%;
+			height: 60px;
+			background: rgba(0,0,0,0);
+			margin: 0px auto;
+			position: fixed;
+			z-index: 8;
+			top: 0px;
+			left: 0px;
+		}
+		.logo{
+			width: 60px;
+			height: 50px;
+			display: block;
+			float: left;
+		}
+		.button_nav{
+			width: 40px;
+			height: 40px;
+			border: 1px solid #000;
+			margin-top: 10px;
+			margin-right: 10px;
+			float: right;
+			font-weight: bold;
+			line-height: 40px;
+			font-size: 18px;
+			text-align: center;
+		}
+		.show_logo{
+			width: 0%;
+			height: 0%;
+			background: rgba(0, 0, 0, 0.6);
+			background-repeat:no-repeat;
+			background-size:100% 100%;
+			-moz-background-size:100% 100%;
+			transition: all ease 1s;
+			color: white;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 9;
+		}
+		.show_logo .text{
+			position: fixed;
+			width: 140px;
+			height: 290px;
+			word-break: break-all;
+			padding: 5px;
+			display: none;
+			font-family: '微软雅黑';
+			text-align: center;
+			font-weight: bolder;
+			z-index: 999;
+		}
+		.show_big_logo{
+			width: 100%;
+			height: 100%;
+			display: none;
+
+		}
+		.nav_curtain{
+			width: 100%;
+			height: 90%;
+			background:rgba(0,0,0,0.1);
+			position: fixed;
+			top: 60px;
+			left: 0px;
+			display: none;
+			z-index: 9;
+		}
+		.nav_curtain .nav_box{
+			width: 100px;
+			height: 40px;
+			background:green;
+			text-align: center;
+			line-height: 40px;
+			font-family: '微软雅黑';
+			margin: 20px auto;
+			color: white;
+			border-radius: 10px;
+			list-style: none;
+			box-shadow: 0px 0px 5px #000;
+		}
+		.header,.aboutus{
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			margin-bottom: -5px;
+		}
+		.header img{
+			width: 100%;      
+			height: 100%;
+
+		}
+
+		.about{
+			width: 100%;
+			position: relative;
+		}
+		.about img{
+			width: 100%;
+		}
+		.text_about{
+			position: absolute;
+			top: 165px;
+			left: 0px;
+		}
+		.text_div_about{
+			display: block;
+			box-sizing:border-box;
+			width: 100%;
+			height: 380px;
+			background: rgb(252,140,20);
+			color: white;
+			font-family: sans-serif;
+			padding: 35px 30px;
+			align-content: center;
+			text-align: center;
+			margin-top: -10px;
+		}
+		p{
+			font-size: 14px;
+			font-family: sans-serif;
+		}
+
+		.load_curtain{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background: white;
+			z-index: 10000000;
+		}
+		.load_curtain .curtain_box2{
+			width:40%;
+			height: 100px;
+			color: red;
+			position: absolute;
+			top: 40%;
+			left: 30%;
+			z-index: -1;
+			font-family: 'STLiti';
+			color: red;
+			font-size: 60px;
+			line-height: 100px;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="nav_curtain" id="nav_curtain">
+		<br>
+		<br>
+		<ul>
+			<li class="nav_box animated infinite bounce delay-2s">主席团</li>
+			<li class="nav_box animated infinite wobble delay-2s">运维部</li>
+			<li class="nav_box animated infinite swing delay-2s">研发部</li>
+			<li class="nav_box animated infinite pulse delay-2s">join us</li>
+		</ul>
+	</div>
+	<div onclick="hidden_logo()" id="showLogo" class="show_logo">
+		<div class="text" id="text">
+			电子科技大学学生宿舍网络管理委员会（即网管会,英文全称NetUnion,简称NU）,原名网盟,成立于1999年11月,现隶属于电子科技大学信息中心。从建立网管会到现在，网管会历届有很多的牛人，他们是我们学习的目标和动力。
+		</div>
+		<div class="show_big_logo" id="show_big_logo">
+			<div class="root">
+			<div class="container">
+				<div class="box1"></div>
+				<div class="box2 animated infinite pulse delay-20s">df</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="nav" id="nav">
+		<div class="logo" onclick="show_logo()">
+			<div class="root" id="before_logo">
+				<div class="container">
+					<div class="box1"></div>
+					<div class="box2 animated infinite pulse delay-20s">df</div>
+				</div>
+			</div>
+		</div>
+		<div class="button_nav" onclick="show_button()">三</div>
+	</div>
+
+	<div class="header">
+		<img src="img/headbgimg.png" alt="">
+	</div>
+	
+	<!-- 介绍 -->
+	<div class="about">
+		<img src="img/about.png" alt="">
+		<img src="img/aboutus_text.png" class="text_about" alt="">
+		<div class="text_div_about">
+			<h3>网络管理委员会</h3>
+			<br>
+		<p>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子科技大学学生宿舍网络管理委员会（即网管会,英文全称NetUnion,简称NU）,原名网盟。致力于维护电子科技大学沙河校区学生宿舍网络的正常使用.
+		</p>
+			<br>
+		<b>我们可以提供:</b>
+		<br>
+		<p>1.为您提供全面的网络知识的学习方法和资料</p>
+		<br>
+		<p>2.为您营造适宜的工作环境和浓厚的学习氛围</p>
+		<br>
+		<p>3.为您共同探讨最前沿的网络技术和学习心得</p>
+		<br>
+		<p>4.为您提供全真网络环境下各种设备实践机会</p>
+		</div>
+	</div>
+
+
+	<!-- 网管会组织结构 -->
+	<div class="organization">
+		<br>
+		<br>
+		<br>
+
+		<div class="organ_box">
+			<div class="leader">主席团</div>
+			<div class="maintain">
+				<div class="left_maintain">
+					<div class="net">网络管理员</div>
+				<div class="system">系统管理员</div>
+				</div>
+				<div class="maintain_sub">运维部</div>
+			</div>
+			<div class="develop">
+				<div class="develop_sub">研发部</div>
+				<div class="develop_right">
+					<div class="l_type">Java</div>
+					<div class="l_type">PHP</div>
+					<div class="l_type">Web前端</div>
+					<div class="l_type" style="border:none;">UI/视觉设计</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 牛人介绍 -->
+	<div class="member">
+		<div class="member_content">
+			
+			<div class="tag">
+				<div class="text">Daren Introduction</div>
+				<div class="tag_bottom"></div>
+			</div>
+			<ul class="member_info"> 
+				<li>
+					<div class="header_img">
+						<img id="job_img_1" src="img/headbgimg.png" alt="">
+					</div>
+					<b>长羽毛</b>
+					<span>2014信软</span>
+					<p>介绍........</p>
+					<div class="job" id="job_text_1">Java后端工程师</div>
+				</li>
+				<li>
+						<div class="header_img">
+							<img id="job_img_2" src="img/headbgimg.png" alt="">
+						</div>
+						<b>长羽毛</b>
+						<span>2016信软</span>
+						<p>介绍asdsaddwqsdfsdfsefefwfqefqwdqwdwqdsfewfewfewfewfewfewfewff........</p>
+						<div class="job" id="job_text_2">Web前端工程师</div>
+					</li>
+					<li>
+							<div class="header_img">
+								<img id="job_img_3" src="img/headbgimg.png" alt="">
+							</div>
+							<b>长羽毛</b>
+							<span>2014信软</span>
+							<p>介绍........</p>
+							<div class="job" id="job_text_3">热爱网络的你</div>
+						</li>
+			</ul>
+			
+		</div>	
+	</div>
+
+	<!-- 地址 -->
+	<div class="address">
+		地址：电子科技大学（沙河校区）阳关餐厅后
+	</div>
+
+	<!-- load curtain -->
+	<div class="load_curtain" id="load_curtain">
+		<div class="root">
+		<div class="container">
+			<div style="border-color:green;" class="box1"></div>
+			<div class="curtain_box2 animated infinite pulse delay-20s">df</div>
+		</div>
+	</div>
+	</div>
+	<script>
+		function get_id(id_str){
+			var id = document.getElementById(id_str);
+			return id;
+		}
+		function show_logo(){
+			var id = get_id('showLogo');
+			var logo = get_id('show_big_logo')
+			var text = get_id('text');
+			var before_logo = get_id('before_logo');
+			before_logo.style.display = 'none';
+			id.style.width = '100%';
+			id.style.height = '100%';
+			logo.style.display = 'block';
+			setTimeout(function(){
+				text.style.display = 'block';
+			},1000);
+		}
+		function hidden_logo(){
+			var id = get_id('showLogo');
+			var text = get_id('text');
+			var before_logo = get_id('before_logo');
+			before_logo.style.display = 'block';
+			id.style.width = '0%';
+			id.style.height = '0%';
+			var logo = get_id('show_big_logo')
+			logo.style.display = 'none';
+			text.style.display = 'none';
+		}
+		function show_button(){
+			var id = get_id('nav_curtain');
+			id.style.display == 'block'?id.style.display = 'none':id.style.display = 'block';
+		}
+		window.onload = function(){
+			var text = get_id('text');
+			console.log(text.style.marginTop)
+			text.style.top = (this.innerHeight - 300) / 2 + 'px';
+			text.style.left = (this.innerWidth - 150) / 2 + 'px';
+
+			/*
+			border-bottom: 1px solid #000;
+			box-shadow: 0px 0px 5px #000;
+			*/
+
+			var nav = get_id('nav');
+			window.onscroll = function(){
+				var t = document.documentElement.scrollTop || document.body.scrollTop;
+				if(t==0){
+					nav.style.borderBottom = '0px solid #000';
+					nav.style.boxShadow = '0px 0px 0px #000';
+					nav.style.background = 'rgba(0,0,0,0)';
+					console.log(t)
+				}else{
+					console.log(t)
+					nav.style.borderBottom = '1px solid #000';
+					nav.style.boxShadow = '0px 0px 5px #000';
+					nav.style.background = 'rgba(0,0,0,0.1)';
+				}
+				
+				// 获取三个 li 职位 id
+				var job_img_1 = get_id("job_img_1");
+				var job_img_2 = get_id("job_img_2");
+				var job_img_3 = get_id("job_img_3");
+				var job_text_1 = get_id("job_text_1");
+				var job_text_2 = get_id("job_text_2");
+				var job_text_3 = get_id("job_text_3");
+				if(t>1200 && t < 1540){
+					//document.documentElement.scrollTop = 1200;
+					job_img_1.style.borderRadius = "50%";
+					job_img_1.style.borderColor = "orange";
+					job_text_1.style.height = "40px";
+					job_text_1.style.lineHeight = "40px";
+					job_text_1.style.fontSize = "16px";
+				}else if(t > 1540 && t < 1600){
+					job_img_2.style.borderRadius = "50%";
+					job_img_2.style.borderColor = "orange";
+					job_text_2.style.height = "40px";
+					job_text_2.style.lineHeight = "40px";
+					job_text_2.style.fontSize = "16px";
+				}else if(t > 1600){
+					job_img_3.style.borderRadius = "50%";
+					job_img_3.style.borderColor = "orange";
+					job_text_3.style.height = "40px";
+					job_text_3.style.lineHeight = "40px";
+					job_text_3.style.fontSize = "16px";
+				}
+			}
+			
+			get_id('load_curtain').style.display = 'none';
+		}
+	</script>
+</body>
+</html>

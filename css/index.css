@@ -1,0 +1,217 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+    color: #000;
+}
+
+.nav,.banner,.blog,.myLinks{
+	width: 100%;
+	/* border: 1px solid #ccc; */
+	box-sizing: border;	
+}
+
+.nav{
+	height: 55px;
+    background: #ccc;
+    line-height: 55px;
+    z-index: 999;
+}
+.nav h1{
+	text-indent: 10px;
+	width: 70%;
+	float: left
+}
+.nav .buttons{
+	width: 40px;
+	height: 36px;
+	background: #ccc;
+	float: right;
+	margin-right: 20px;
+	border: 1px solid #000;
+	box-sizing: border;
+	text-align: center;
+	line-height: 38px;
+    margin-top: 7px;
+}
+.nav .option_nav{
+    z-index: 99999;
+	width: 100%;
+	height: 50px;
+	background: #ccc;
+	position: absolute;
+	top: 45px;
+	left: 0px;
+	display: none;
+}
+.nav .option_nav a{
+	text-decoration: none;
+	color: white;
+	background: blue;
+	margin: 10px 0px 10px 10px;
+	display: block;
+	height: 30px;
+	width: 100px;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+}
+
+/*  @keyframes rot{
+   0%{
+       transform: rotateX(0deg) rotateY(0deg);
+   }
+   100%{transform:rotateX(360deg) rotateY(360deg);}
+}
+
+@keyframes video_card_rot {
+   0%{
+       transform: rotateY(0deg);
+   }
+   100%{transform:rotateY(360deg);}
+}  */
+
+.banner{
+	height: 240px;
+	perspective: 1000px;
+}
+.leftBox_container{
+	width: 50%;
+    height: 240px;
+    float: left;
+    position: relative;
+}
+.rightBox_container{
+	width: 50%;
+    height: 240px;
+    float: left;
+    position: relative;
+}
+
+
+.banner .leftBox > div,.banner .rightBox > div{
+	width: 100%;
+    height: 100%;
+    border: 1px #ccc dashed;
+    background: #ccc;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    text-align: center;
+    font-family: "微软雅黑 Light";
+    color: red;
+    text-shadow: 5px 0 10px gold;
+    background: white;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+.banner .leftBox > div img,.banner .rightBox > div img{
+	width: 100%;
+	height: 100%;
+}
+
+
+.banner .leftBox{
+	font-size: 1px;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    -webkit-transform-style: preserve-3d;
+   	/* animation: rot 15s linear infinite; */
+    z-index: 1;
+    -webkit-user-select: none;
+    /* transform: rotateX(40deg) rotateY(40deg); */
+}
+
+.banner .leftBox > div:nth-child(1){
+    -webkit-transform: translateZ(30px);
+}
+.banner .leftBox > div:nth-child(2){
+    -webkit-transform: translateZ(-30px);
+}
+.banner .leftBox > div:nth-child(3){
+    -webkit-transform:  rotateX(90deg) translateZ(30px);
+}
+.banner .leftBox > div:nth-child(4){
+    -webkit-transform: rotateX(90deg) translateZ(-30px);
+}
+.banner .leftBox > div:nth-child(5){
+    -webkit-transform: rotateY(90deg) translateZ(30px);
+}
+.banner .leftBox > div:nth-child(6){
+    -webkit-transform: rotateY(90deg) translateZ(-30px);
+}
+
+
+.banner .rightBox{
+	font-size: 1px;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    -webkit-transform-style: preserve-3d;
+   	-webkit-animation: rot 15s linear infinite;
+    z-index: 1;
+    -webkit-user-select: none;
+}
+
+.banner .rightBox > div:nth-child(1){
+    -webkit-transform: translateZ(30px);
+}
+.banner .rightBox > div:nth-child(2){
+    -webkit-transform: translateZ(-30px);
+}
+.banner .rightBox > div:nth-child(3){
+    -webkit-transform:  rotateX(90deg) translateZ(30px);
+}
+.banner .rightBox > div:nth-child(4){
+    -webkit-transform: rotateX(90deg) translateZ(-30px);
+}
+.banner .rightBox > div:nth-child(5){
+    -webkit-transform: rotateY(90deg) translateZ(30px);
+}
+.banner .rightBox > div:nth-child(6){
+    -webkit-transform: rotateY(90deg) translateZ(-30px);
+}
+
+
+
+.blog{
+	
+}
+.myLinks{
+	
+}
+
+#curtain{
+    width: 100%;
+    height: 100%;
+    background: white;
+    margin: 0 auto;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#curtain img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 40% auto 5px auto;
+}
+#curtain p{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    text-align: center;
+}

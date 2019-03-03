@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Strapdown.js 解析库</title>
+	<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<style rel="stylesheet">
+		.nav{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		.nav h1{
+			margin: 0px;
+			line-height: 55px;
+		}
+		.nav > a{
+			color: #000;
+		}
+		.nav .buttons{
+			margin-top: 7px;
+		}
+	</style>
+</head>
+<body>
+<div class="nav">
+		<a href="index.html"><h1>Ni Xin Yu</h1></a>
+		<div class="buttons" id="buttons">三</div>
+		<div class="option_nav" id="optionNav">
+			<a href="company.html" class="opBtn" id="company">company</a>
+			<a href="company.html" class="opBtn">contact me</a>
+		</div>
+	</div>
+<xmp theme="united" style="display:none;">
+	
+> Strapdown.js是markdown to html 的javascript，并且带有界面效果，不需要你写CSS样式，只要在html页面里面写markdown，他就會把你寫的文字解析然后在浏览器呈现出用户体验良好的布局。
+
+### 使用Strapdown.js和markdown写极简静态博客
+
+项目主页：http://strapdownjs.com/
+下载地址：https://github.com/arturadib/strapdown
+
+
+### 一个典型的页面：
+
+```html
+"\<xmp theme="united" style="display:none;">
+	# 标题
+	### 副标题
+
+	[链接](http://....)
+\<\/xmp>"
+
+```
+
+
+
+
+
+------ 
+
+### ** [<< 返回首页](index.html) **
+
+</xmp>
+<div id="curtain">
+	<img src="img/2.png" alt="">
+	<p>Waiting....</p>
+</div>
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+<script src="js/index.js"></script>
+<script src="js/loadCurtain.js"></script>
+</body>
+</html>

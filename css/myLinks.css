@@ -1,0 +1,28 @@
+.myLinks{
+	height: 100px;
+	background: #ccc;
+}
+
+.links{
+	width: 100%;
+	height: 100px;
+}
+
+.links li {
+	width: 80px;
+	height: 40px;
+	float: left;
+	margin: 30px 0px 30px 18px;
+}
+.links li a{
+	display: block;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+}
+
