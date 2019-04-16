@@ -1,0 +1,343 @@
+ul,li,body{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.header{
+    width: 80rem;
+    height: 4.2rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.header h2{
+    width: 20rem;
+    height: 1.3rem;
+    float: left;
+    margin-left: 15rem;
+    margin-top: 1.6rem;
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1rem;
+    letter-spacing: 0.2rem;
+    color: #04527b;
+}
+.header p {
+    height: 2rem;
+    float: right;
+    box-sizing: border-box;
+    margin-right: 15rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.header p img{
+    width: .8rem;
+    height: .8rem;
+    margin-right: .5rem;
+    float: left;
+}
+.header p b{
+    height: .7rem;
+    font-size: 0.7rem;
+    line-height: .7rem;
+    letter-spacing: 0.1rem;
+    color: #04527b;
+}
+
+.banner{
+    margin: 0 auto;
+    width: 80rem;
+    height: 34.2rem;
+    background-color: #847c7c;
+    background-image: url("../img/bg/banner-bg.png");
+    background-size:100% 100%;
+}
+
+
+
+
+.hr-firm,.hr-product,.hr-honor{
+    width: 80rem;
+    height: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7.3rem auto;
+
+}
+.hr-title{
+    width: 8rem;
+    height: 100%;
+    margin: 0 1.8rem;
+    display: inline;
+    text-align: center;
+}
+
+
+.hr-title span:nth-child(1){
+    width: 100%;
+    height: 1.3rem;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: #1b76bd;
+}
+
+.hr-title span:nth-child(2){
+    width: 100%;
+    height: 0.4rem;
+    font-size: 0.1rem;
+    line-height: 1rem;
+    color: #999999;
+}
+.hr-firm img,.hr-product img,.hr-honor img{
+    width: 20.3rem;
+    height: 0.3rem;
+}
+
+
+
+
+
+
+/*
+    公司介绍内容
+*/
+
+
+.firm-introduce{
+    width: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.firm-introduce-content{
+    background-image: url("../img/bg/firm-text-border.png");
+    background-size:100% 100%;
+    width: 54rem;
+    position: relative;
+    padding: 0.7rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.firm-text .box{
+    width: 21.3rem;
+    height: 15.5rem;
+    float: left;
+    margin: 0 1.1rem 1.2rem 0;
+}
+.firm-text p{
+    margin: 0;
+    text-indent: 2em;
+    font-size: 0.5rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    color: #666666;
+
+}
+.firm-introduce-content img{
+    width: 26.6rem;
+    height: 17.8rem;
+    position: absolute;
+    top: -1.3rem;
+    left: -4.5rem;
+}
+
+.firm-introduce-content p {
+    font-size: 0.5rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    color: #666666;
+}
+
+
+
+
+
+/* 生产制造 */
+
+
+.product-bg{
+    width: 80rem;
+    height: 38.3rem;
+    box-sizing: border-box;
+    background-image: url("../img/bg/production-bg.png");
+    background-size: 100% 100%;
+    margin:0 auto;
+}
+
+.product-introduce-title{
+    width: 50.1rem;
+    height: 2.1rem;
+    margin: 4.5rem auto;
+    background-image: url("../img/bg/product-title-bg.png");
+    background-size: 100% 100%;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+    line-height: 2.1rem;
+    text-indent: 1em;
+}
+
+.change-box{
+    box-sizing: border-box;
+    margin: 1.6rem  auto;
+    width: 61.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25.9rem;
+}
+
+.change-box span{
+    display: block;
+    width: 3.1rem;
+    height: 3.1rem;
+    cursor: pointer;
+}
+
+.change-box span img{
+    width: 100%;
+    height: 100%;
+}
+
+.change-box ul{
+    width: 50.2rem;
+    height: 25.9rem;
+    margin: 0 2.6rem;
+    overflow: hidden;
+}
+
+.change-box ul li{
+
+}
+.change-box ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* 资质荣誉 */
+
+.honor-show-bg{
+    width: 80rem;
+    height: 24.9rem;
+    background-image: url("../img/bg/honor-bg.png");
+    background-size: 100% 100%;
+    margin: 0 auto;
+    margin-bottom: 6.3rem;
+
+}
+
+.honor-show-box{
+    width: 58.2rem;
+    height: 24.9rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.honor-show-box span{
+    display: block;
+    width: 1.3rem;
+    height: 2.3rem;
+    cursor: pointer;
+}
+.honor-show-box span img{
+    width: 100%;
+    height: 100%;
+}
+
+.honor-show-box ul{
+    width: 45.6rem;
+    height: 8.7rem;
+    margin: 0 5rem;
+}
+
+.honor-show-box ul li{
+    width: 13rem;
+    height: 8.7rem;
+    padding: 0.5rem;
+    float: left;
+    box-sizing: border-box;
+    background-image: url("../img/bg/honor-border.png");
+    background-size: 100% 100%;
+    margin-right: 3.3rem;
+}
+.honor-show-box ul li:nth-last-child(1){
+    margin-right: 0;
+}
+.honor-show-box ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* footer */
+
+.footer{
+    width: 80rem;
+    height: 12.1rem;
+    margin: 1rem auto;
+    background-color: #2b4d71;
+    padding-top: 3.7rem;
+    box-sizing: border-box;
+}
+
+
+.footer h3{
+    width: 17.3rem;
+    height: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    display: block;
+    margin: 0 auto 1rem 15rem;
+}
+
+.footer p{
+    min-width: 15rem;
+    height: .7rem;
+    font-size: 0.5rem;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    margin: 0 auto .5rem 15rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
