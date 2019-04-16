@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>德阳市中嘉实业股份有限公司</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 <body>
 <div class="header">
 <h2>德阳市中嘉实业股份有限公司</h2>
-<p>
+<p id="phone-tada">
     <img src="./img/icon/phone-icon.png" alt="">
     <b>0838-26803890</b>
 </p>
@@ -68,26 +69,26 @@
     海水淡化设备制造
 </div>
     <div class="change-box">
-        <span>
+        <span id="product-left-btn">
             <img src="./img/icon/product-left-arrow.png" alt="">
         </span>
 
         <ul>
             <li>
-                <img src="./img/生产制造/污水处理现场.jpg" alt="">
+                <img id="product-img" src="./img/生产制造/污水处理现场.jpg" alt="">
             </li>
-            <li>
-                <img src="./img/生产制造/污水处理现场.jpg" alt="">
-            </li>
-            <li>
-                <img src="./img/生产制造/污水处理现场.jpg" alt="">
-            </li>
-            <li>
-                <img src="./img/生产制造/污水处理现场.jpg" alt="">
-            </li>
+            <!--<li>-->
+                <!--<img src="./img/生产制造/污水处理现场.jpg" alt="">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/生产制造/污水处理现场.jpg" alt="">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/生产制造/污水处理现场.jpg" alt="">-->
+            <!--</li>-->
         </ul>
         
-        <span>
+        <span id="product-right-btn">
             <img src="./img/icon/product-right-arrow.png" alt="">
         </span>
     </div>
@@ -109,23 +110,35 @@
 <div class="honor-show-bg">
     <div class="honor-show-box">
 
-        <span>
+        <span id="honor-left-btn">
             <img src="./img/icon/honor-left-arrow.png" alt="">
         </span>
 
-        <ul>
-            <li>
-                <img src="./img/荣誉/1.jpg" alt="">
-            </li>
-            <li>
-                <img src="./img/荣誉/1.jpg" alt="">
-            </li>
-            <li>
-                <img src="./img/荣誉/1.jpg" alt="">
-            </li>
-        </ul>
+        <div class="honor-ul-wrap">
+            <ul id="honor-ul">
+                <li>
+                    <img src="./img/荣誉/1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./img/荣誉/2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./img/荣誉/3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./img/荣誉/4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./img/荣誉/5.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./img/荣誉/6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
 
-        <span>
+
+        <span id="honor-right-btn">
             <img src="./img/icon/honor-right-arrow.png" alt="">
         </span>
 
@@ -138,5 +151,8 @@
     <p>地址：德阳市图门江路23号</p>
     <p>电话：0838-26803890 </p>
 </div>
+
+<script src="./js/index.js"></script>
+
 </body>
 </html>
