@@ -15,7 +15,6 @@ ul,li,body{
     float: left;
     margin-left: 15rem;
     margin-top: 1.6rem;
-    font-family: MicrosoftYaHei-Bold;
     font-size: 1.3rem;
     font-weight: normal;
     font-stretch: normal;
@@ -174,12 +173,14 @@ ul,li,body{
     background-image: url("../img/bg/production-bg.png");
     background-size: 100% 100%;
     margin:0 auto;
+    padding-top: 4.5rem;
+    box-sizing: border-box;
 }
 
 .product-introduce-title{
     width: 50.1rem;
     height: 2.1rem;
-    margin: 4.5rem auto;
+    margin: 0 auto;
     background-image: url("../img/bg/product-title-bg.png");
     background-size: 100% 100%;
     letter-spacing: 0.2rem;
