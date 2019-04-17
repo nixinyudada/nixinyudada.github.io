@@ -67,7 +67,7 @@ ul,li,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 7.3rem auto;
+    margin: 7.3rem auto 3rem auto;
 
 }
 .hr-title{
@@ -154,6 +154,14 @@ ul,li,body{
 }
 
 .firm-introduce-content p {
+    font-size: 0.5rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    color: #666666;
+}
+#text-content{
     font-size: 0.5rem;
     font-weight: normal;
     font-stretch: normal;
